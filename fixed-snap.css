@@ -11,6 +11,11 @@ body {
 }
 [snap-fixed],
 [snap-static] {
+  -webkit-transform: translateX(0);
+     -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+       -o-transform: translateX(0);
+          transform: translateX(0);
   -webkit-transition: -webkit-transform 0.3s;
      -moz-transition:    -moz-transform 0.3s;
       -ms-transition:     -ms-transform 0.3s;
@@ -35,11 +40,19 @@ body {
 }
 .snap-open-left [snap-fixed],
 .snap-open-left [snap-static] {
-  transform: translateX(265px);
+  -webkit-transform: translateX(265px);
+     -moz-transform: translateX(265px);
+      -ms-transform: translateX(265px);
+       -o-transform: translateX(265px);
+          transform: translateX(265px);
 }
 .snap-open-right [snap-fixed],
 .snap-open-right [snap-static] {
-  transform: translateX(-265px);
+  -webkit-transform: translateX(-265px);
+     -moz-transform: translateX(-265px);
+      -ms-transform: translateX(-265px);
+       -o-transform: translateX(-265px);
+          transform: translateX(-265px);
 }
 .snap-toggle-left,
 .snap-toggle-right {

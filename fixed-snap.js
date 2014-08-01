@@ -2,7 +2,7 @@ angular.module('fixed-snap', [])
   .directive('snapDrawer', [
     '$rootScope', '$timeout',
     function ($rootScope, $timeout) {
-      var body = document.querySelector('body');
+      var snapWrapper = document.querySelector('body');
       var snapStatic = document.querySelector('[snap-static]');
       var snapFixed = document.querySelector('[snap-fixed]');
 
@@ -27,8 +27,7 @@ angular.module('fixed-snap', [])
 
           scope.close = function () {
             scope.open = false;
-            element[0].classList.add('show');
-            body.classList.toggle('snap-open-' + scope.snapDrawer, false);
+            snapWrapper.classList.toggle('snap-open-' + scope.snapDrawer, false);
             $timeout(function () {
               snapStatic.removeEventListener('click', clickHandler);
               snapFixed.removeEventListener('click', clickHandler);
@@ -37,8 +36,7 @@ angular.module('fixed-snap', [])
 
           scope.show = function () {
             scope.open = true;
-            element[0].classList.remove('show');
-            body.classList.toggle('snap-open-' + scope.snapDrawer, true);
+            snapWrapper.classList.toggle('snap-open-' + scope.snapDrawer, true);
             $timeout(function () {
               snapStatic.addEventListener('click', clickHandler);
               snapFixed.addEventListener('click', clickHandler);
