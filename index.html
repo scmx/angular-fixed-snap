@@ -3,11 +3,13 @@
   <head>
     <title>angular-fixed-snap</title>
     <link rel="stylesheet" href="fixed-snap.css"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <style type="text/css">
       body {
         font-family: Helvetica, arial, sans-serif;
       }
       pre {
+        overflow: hidden;
         margin: 20px 0;
         padding: 10px;
         background: whitesmoke;
@@ -49,6 +51,7 @@
     </style>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="
     //cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
     <script src="fixed-snap.js"></script>
@@ -56,33 +59,15 @@
       angular.module('example', ['fixed-snap']);
     </script>
     <script>
-      function get(path, callback) {
-        var request = new XMLHttpRequest();
-        request.open('GET', path, true);
-
-        request.onload = function() {
-          if (request.status >= 200 && request.status < 400){
-            // Success!
-            callback(request);
-          } else {
-            // We reached our target server, but it returned an error
-
-          }
-        };
-
-        request.onerror = function() {
-          // There was a connection error of some sort
-        };
-
-        request.send();
-      }
-      get('README.md', function (request) {
-        var converter = new Showdown.converter();
-        var readmeHTML = converter.makeHtml(request.responseText);
-        document.querySelector('#readme').innerHTML = readmeHTML;
-      });
-      get('LICENSE', function (request) {
-        document.querySelector('#license').innerHTML = request.responseText;
+      $(function () {
+        $.get('README.md', function (responseText) {
+          var converter = new Showdown.converter();
+          var readmeHTML = converter.makeHtml(responseText);
+          document.querySelector('#readme').innerHTML = readmeHTML;
+        });
+        $.get('LICENSE', function (responseText) {
+          document.querySelector('#license').innerHTML = responseText;
+        });
       });
     </script>
   </head>

@@ -1,7 +1,9 @@
 html {
+  overflow: auto;
 }
 body {
   margin: 0;
+  overflow: hidden;
 }
 [snap-fixed],
 [snap-drawer] {

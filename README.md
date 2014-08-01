@@ -8,10 +8,14 @@ Minimal Snap.js clone written for Angular.js
 
 [GitHub repository](https://github.com/scmx/angular-fixed-snap)
 
+## Installation
+
 ```bash
 # Install via bower
 bower install --save angular-fixed-snap
 ```
+
+## Setup
 
 ```javascript
 // Include the angular module
@@ -37,3 +41,7 @@ angular.module('example', [
   </div>
 </body>
 ```
+
+## Contributing
+
+Pull requests are welcome
