@@ -1,0 +1,26 @@
+{
+  "name": "angular-fixed-snap",
+  "version": "0.1.0",
+  "homepage": "https://github.com/scmx/angular-fixed-snap",
+  "authors": [
+    "Albert Arvidsson <albert.arvidsson@gmail.com>"
+  ],
+  "description": "Minimal Snap.js clone written for Angular.js",
+  "main": [
+    "fixed-snap.js",
+    "fixed-snap.css"
+  ],
+  "keywords": [
+    "angular",
+    "fixed",
+    "snap",
+    "mobile",
+    "nav"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "index.html",
+    "LICENSE",
+    "README.md"
+  ]
+}
