@@ -3,6 +3,16 @@ angular-fixed-snap
 
 Minimal Snap.js clone written for Angular.js
 
+
+[Example index.html at 5minfork.com](http://5minfork.com/scmx/angular-fixed-snap)
+
+[GitHub repository](https://github.com/scmx/angular-fixed-snap)
+
+```bash
+# Install via bower
+bower install --save angular-fixed-snap
+```
+
 ```javascript
 // Include the angular module
 angular.module('example', [
